@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+</head>
+<body>
+    <h1>Compound Interest Calculator </h1>
+
+    <!--INPUTS-->
+    <div id="inputs"><!--START-->
+
+        <div class="input-group">
+            <label for="principal">Starting amount (₦)</label>
+            <input type="number" id="principal" value="10000" /> 
+        </div>
+
+        <div class="input-group">
+            <label for="rate">Anuual intrest rate (%)</label>
+            <input type="number" id="rate" value="7" /> 
+        </div>
+
+        <div class="input-group">
+            <label for="rate">Time period (years)</label>
+            <input type="number" id="years" value="20" /> 
+        </div>
+
+        <div class="input-group">
+            <label for="frequency">Compound frequency</label>
+            <select id="frequency">
+                <option value="1">Annually</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+                <option value="365">Daily</option>
+            </select> 
+        </div>
+
+    </div><!--END-->
+
+    <!--RESULTS-->
+    <div id="results"><!--START-->
+        <div class="result-card">
+            <p class="result-label">Final balance</p>
+            <p class="result-value" id="final-balance">₦0</p>
+        </div>
+         <div class="result-card">
+            <p class="result-label">Interest earned</p>
+            <p class="result-value" id="interest-earned">₦0</p>
+        </div>
+         <div class="result-card">
+            <p class="result-label">Money multiplied</p>
+            <p class="result-value" id="multiplier">0x</p>
+        </div>
+    </div><!--END-->
+
+    <!--CHART-->
+    <div id="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+    
+</body>
+</html>
