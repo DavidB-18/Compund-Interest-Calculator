@@ -1,0 +1,109 @@
+/* ================================
+   BASE STYLES
+   ================================ */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   body {
+    font-family:Arial, sans-serif ;
+    background-color:#f4f4f4;
+    color:#333333;
+    padding: 40px 20px;
+   }
+
+   h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    color:#1a1a1a;
+   }
+
+
+   /* ================================
+   INPUTS SECTION
+   ================================ */
+
+   #inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+   }
+
+   .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   }
+
+
+   .input-group label {
+    font-size: 14px;
+    color: #666666;
+   }
+
+   .input-group input,
+   .input-group select {
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    outline: none;
+    background-color:#fafafa;
+   }
+
+   .input-group input:focus,
+   .input-group select:focus {
+    border-color:#378ADD;
+    background-color:#ffffff;
+   }
+
+
+   /* ================================
+   RESULTS SECTION
+   ================================ */
+
+   #results {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+   }
+
+
+   .result-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+   }
+
+   .result-label {
+      font-size: 13px;
+      color: #888888;
+      margin-bottom: 8px;
+   }
+
+   .result-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1a1a1a;
+   }
+
+
+   /* ================================
+   CHART SECTION
+   ================================ */
+
+
+   #chart-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      height: 320px;
+   }
