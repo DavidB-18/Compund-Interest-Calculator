@@ -152,3 +152,14 @@ calculate();
 // ================================
 
 document.getElementById("calculate-btn").addEventListener("click", calculate);
+
+// DARK MODE TOGGLE
+document.getElementById("dark-mode-btn").addEventListener("click", function() {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    document.getElementById("dark-mode-btn").textContent = "Light mode";
+  }else {
+    document.getElementById("dark-mode-btn").textContent = "Dark mode";
+  }
+});

@@ -17,6 +17,22 @@
     margin: 0 auto;
    }
 
+   #top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+#dark-mode-btn {
+  background: transparent;
+  border: 1px solid #cccccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #666666;
+}
+
    h1 {
     font-size: 28px;
     margin-bottom: 32px;
@@ -208,3 +224,65 @@
     height: 220px;
   }
    }
+
+   /* ================================
+   DARK MODE
+   ================================ */
+
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark h1 {
+  color: #f0f0f0;
+}
+
+body.dark #inputs {
+  background-color: #2a2a2a;
+}
+
+body.dark .input-group label {
+  color: #aaaaaa;
+}
+
+body.dark .input-group input,
+body.dark .input-group select {
+  background-color: #333333;
+  border-color: #444444;
+  color: #f0f0f0;
+}
+
+body.dark .result-card {
+  background-color: #2a2a2a;
+}
+
+body.dark .result-label {
+  color: #aaaaaa;
+}
+
+body.dark .result-value {
+  color: #f0f0f0;
+}
+
+body.dark #chart-container {
+  background-color: #2a2a2a;
+}
+
+body.dark #chart-container h2 {
+  color: #aaaaaa;
+}
+
+body.dark .legend-text {
+  color: #aaaaaa;
+}
+
+body.dark #formula {
+  color: #666666;
+}
+
+body.dark #dark-mode-btn {
+  border-color: #555555;
+  color: #aaaaaa;
+}
