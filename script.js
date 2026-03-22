@@ -64,12 +64,7 @@ function calculate() { //START OF FUNCTION
   // STEP 8: DRAW THE CHART
   // ================================
 
-  if (myChart !== null) {
-    myChart.destroy();
-  }
-
-
-  var ctx =document.getElementById("chart").getContext("2d");
+  
 
    var chartData = {
     labels: labels,
@@ -87,8 +82,8 @@ function calculate() { //START OF FUNCTION
       {
          label: "Interest earned",
         data: interestData,
-        borderColor: "#B5D4F4",
-        backgroundColor: "rgba(181, 212, 244, 0.08)",
+        borderColor: "#FE81D4",
+        backgroundColor: "#ef719139",
         fill: true,
         tension: 0.4,
         pointRadius: 2,
@@ -114,7 +109,7 @@ function calculate() { //START OF FUNCTION
     responsive: true,
     maintainAspectRatio: false,
     animation: {
-      duration: 10000,
+      duration: 1000,
       easing: "easeInOutQuart"
     },
     plugins: {
@@ -137,11 +132,17 @@ function calculate() { //START OF FUNCTION
 
   };
 
-  myChart = new Chart(ctx, {
-    type: "line",
-    data: chartData,
-    options: chartOptions
-  });
+  if (myChart === null) {
+    var ctx = document.getElementById("chart").getContext("2d");
+    myChart = new Chart(ctx, {
+        type: "line",
+        data: chartData,
+        options: chartOptions
+    });
+} else {
+    myChart.data = chartData;
+    myChart.update();
+}
 
 } // END OF FUNCTION
 calculate();
