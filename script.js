@@ -47,13 +47,17 @@ function calculate() { //START OF FUNCTION
   // STEP 7: BUILD CHART DATA
   // ================================
 
-  var labels = []
-  var balances = []
+  var labels = [];
+  var balances = [];
+  var interestData = [];
+  var principals = [];
 
   for (var year = 0; year <= t; year++) {
     var balanceAtYear = P * Math.pow((1 + r / n), n * year);
     labels.push(year);
     balances.push(Math.round(balanceAtYear));
+    interestData.push(Math.round(balanceAtYear - P));
+    principals.push(Math.round(P));
   }
 
   // ================================
@@ -77,8 +81,30 @@ function calculate() { //START OF FUNCTION
         backgroundColor: "rgba(55, 138, 221, 0.1)",
         fill: true,
         tension: 0.4,
-        pointRadius: 3,
-        borderWidth: 1
+        pointRadius: 2,
+        borderWidth: 2
+      },
+      {
+         label: "Interest earned",
+        data: interestData,
+        borderColor: "#B5D4F4",
+        backgroundColor: "rgba(181, 212, 244, 0.08)",
+        fill: true,
+        tension: 0.4,
+        pointRadius: 2,
+        borderWidth: 1.5,
+        borderDash: [4, 3]
+      },
+      {
+         label: "Principal",
+        data: principals,
+        borderColor: "#888780",
+        backgroundColor: "transparent",
+        fill: false,
+        tension: 0,
+        pointRadius: 0,
+        borderWidth: 1.5,
+        borderDash: [6, 4]
       }
     ]
   };
@@ -94,7 +120,7 @@ function calculate() { //START OF FUNCTION
     plugins: {
 
       legend: {
-        display: true
+        display: false
       }
       
     },
@@ -125,7 +151,4 @@ calculate();
 // STEP 6: LISTEN FOR CHANGES usind .addEventListener("", )
 // ================================
 
-document.getElementById("principal").addEventListener("input", calculate);
-document.getElementById("rate").addEventListener("input", calculate);
-document.getElementById("years").addEventListener("input", calculate);
-document.getElementById("frequency").addEventListener("change", calculate);
+document.getElementById("calculate-btn").addEventListener("click", calculate);

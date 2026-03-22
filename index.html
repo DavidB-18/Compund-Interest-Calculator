@@ -37,6 +37,10 @@
             </select> 
         </div>
 
+        <div id="button-row">
+             <button id="calculate-btn">Calculate</button>
+        </div>
+       
     </div><!--END-->
 
     <!--RESULTS-->
@@ -57,7 +61,29 @@
 
     <!--CHART-->
     <div id="chart-container">
-        <canvas id="chart"></canvas>
+        <h2>Growth over time</h2>
+
+        <div id="legend">
+
+            <div class="legend-item">
+                <span class="legend-color" id="legend-balance"></span>
+                <span class="legend-text">Balance</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" id="legend-interest"></span>
+                <span class="legend-text">Interest earned</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" id="legend-principal"></span>
+                <span class="legend-text">Principal</span>
+            </div>
+
+        </div>
+
+        <div id="chart-wrapper">
+            <canvas id="chart"></canvas>
+        </div>
+
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

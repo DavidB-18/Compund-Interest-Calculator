@@ -13,6 +13,8 @@
     background-color:#f4f4f4;
     color:#333333;
     padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
    }
 
    h1 {
@@ -64,6 +66,29 @@
     background-color:#ffffff;
    }
 
+   /* ================================
+   CALCULATE BUTTON
+   ================================ */
+   #button-row{
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   #calculate-btn{
+      background-color: #378ADD;
+      color: #ffffff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+   }
+
+   #calculate-btn:hover {
+      background-color:#185FA5;
+   }
+   
 
    /* ================================
    RESULTS SECTION
@@ -105,5 +130,81 @@
       background-color: #ffffff;
       border-radius: 12px;
       padding: 24px;
-      height: 320px;
+      height: 380px;
+   }
+
+   #chart-wrapper{
+      position: relative;
+      height: 280px;
+   }
+
+   #chart-container h2 {
+      font-size: 16px;
+      color: #888888;
+      font-weight: normal;
+      margin-bottom: 12px;
+   }
+
+
+   #legend{
+      display: flex;
+      gap: 20px;
+      margin-bottom: 16px;
+   }
+
+   .legend-item{
+      display: flex;
+      align-items:center ;
+      gap: 6px;
+      font-size: 13px;
+      color: #666666;
+   }
+
+
+   .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      display: inline-block;
+   }
+
+
+   #legend-balance{
+      background-color: #378ADD;
+   }
+   
+   #legend-interest{
+      background-color: #B5D4F4;
+   }
+   
+   #legend-principal{
+      background-color: #888780;
+   }
+
+
+   /* ================================
+   MOBILE
+   ================================ */
+
+   @media (max-width: 600px) {
+
+       #inputs {
+    grid-template-columns: 1fr;
+  }
+
+  #results {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #button-row {
+    justify-content: stretch;
+  }
+
+  #calculate-btn {
+    width: 100%;
+  }
+
+  #chart-wrapper {
+    height: 220px;
+  }
    }
